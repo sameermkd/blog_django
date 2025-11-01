@@ -14,7 +14,9 @@
             {% for product in product %}
                 <div class="col-md-4 mb-4">
                     <div class="card">
+                        <a href="{% url 'show' product.pk %}">
                             <img src="{{ product.image.url }}" alt="{{ product.created_name }}" class="card-img-top">
+                        </a>
                         <div class="card-body">
                             <h5 class="card-title">{{ product.name }}</h5>
                             <p class="card-text">{{ product.short_description }}</p>
